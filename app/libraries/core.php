@@ -18,7 +18,7 @@
 
             //sambungan
             $url = $this->getUrl();
-
+            
             //nak tengok controller untuk 1st value
             if(file_exists('../app/controllers/' . ucwords($url[0]) . '.php')) {
                 //kalau exists, set as controller
@@ -32,6 +32,25 @@
 
             //Instantiate controller class
             $this->currentController = new $this->currentController;
+
+            // okay yang ni url 2nd value
+            if(isset($url[1])){
+                //nak check method to ada tak dalam controller
+                if(method_exists($this->currentController, $url[1])){
+                    $this->currentMethod = $url[1];
+                    //unset 1 index
+                    unset($url[1]);
+
+                }
+            } 
+
+            //echo $this->currentMethod; //yang ni part kalau nak display kat http://localhost/bayuratechmvc/pages/about perkataan about
+
+            //Get params
+            $this->params = $url ? array_values($url) : [];
+
+            //panggil balik array of params
+            call_user_func_array([$this->currentController, $this->currentMethod], $this->params);
         }
 
         public function getUrl(){
