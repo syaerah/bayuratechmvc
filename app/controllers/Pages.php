@@ -5,7 +5,10 @@
         }
 
         public function index(){
-            $this->view('HAIIIII');
+            //$this->view('HAIIIII'); //ni part base controller
+
+            //yang ni belajar part loading views
+            $this->view('pages/index', ['title' => 'HALOOOOOOOOO']);
         }
 
         /* ni contoh 1
@@ -14,9 +17,16 @@
         }
         */
 
-        //ni contoh 2
+        /*ni contoh 2
         public function about($id){
             echo $id;
+        }
+        */
+
+        public function about(){
+            //part loading views
+            $this->view('pages/about');
+
         }
     }
 
