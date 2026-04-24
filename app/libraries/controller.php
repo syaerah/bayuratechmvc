@@ -1,7 +1,7 @@
 <?php
     /*
-    *Base controller
-    *Loads models ngan views
+    // *Base controller
+    // *Loads models ngan views
     */
     
     class Controller{
