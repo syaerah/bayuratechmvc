@@ -8,8 +8,8 @@
         //load model
         public function model($model) {
             //require file model
-            require_once '..app/models/' . $model . '.php';
-
+            require_once '../app/models/' . $model . '.php';
+            
             //Instantiate model
             return new $model;
             

@@ -1,4 +1,10 @@
 <?php
+    //nak setup nDatabase Params
+    define('DB_HOST', 'localhost');
+    define('DB_USER', 'caerah');
+    define('DB_PASS', '123456');
+    define('DB_NAME', 'bmvc');
+
 
     //App root
 
