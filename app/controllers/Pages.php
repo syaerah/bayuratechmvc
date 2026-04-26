@@ -8,8 +8,15 @@
         public function index(){
             //$this->view('HAIIIII'); //ni part base controller
 
+            $post = $this->postModel->getPosts();
+
+            $data = [
+                'title' => 'HALOOOOOOOOO',
+                'posts' => $post
+            ];
+            
             //yang ni belajar part loading views
-            $this->view('pages/index', ['title' => 'HALOOOOOOOOO']);
+            $this->view('pages/index', $data);
         }
 
         /* ni contoh 1
@@ -25,8 +32,12 @@
         */
 
         public function about(){
+            $data = [
+                'title' => 'About Us'
+            ];
+
             //part loading views
-            $this->view('pages/about');
+            $this->view('pages/about', $data);
 
         }
     }
