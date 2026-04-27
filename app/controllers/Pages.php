@@ -6,7 +6,7 @@
 
         public function index(){
             $data = [
-                'title' => 'BELAJAR PHP FRAMEWORK'
+                'title' => 'User Login'
             ];
             
             $this->view('pages/index', $data);
