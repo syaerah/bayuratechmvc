@@ -19,7 +19,7 @@
     define ('APPROOT', dirname(dirname(__FILE__)));
 
     //URL root
-    define ('URLROOT', 'http://localhost/bayuratechmvc');
+    define ('URLROOT', 'http://localhost/bayuratechmvc/public');
 
     //Site names
     define('SITENAME', 'BayuratechMVC');
