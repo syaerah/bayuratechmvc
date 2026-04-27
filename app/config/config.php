@@ -1,25 +1,15 @@
 <?php
-    //nak setup nDatabase Params
     define('DB_HOST', 'localhost');
-    define('DB_USER', 'caerah');
-    define('DB_PASS', '123456');
-    define('DB_NAME', 'bmvc');
+    define('DB_USER', '_YOUR_USER_');
+    define('DB_PASS', '_YOUR_PASS_');
+    define('DB_NAME', '_YOUR_DBNAME_');
 
 
     //App root
-
-    // ni kalau nak display D:\Xampp\htdocs\bayuratechmvc\app\config\config.php
-    // echo __FILE__;
-
-    // kalau nak hide config.php (D:\Xampp\htdocs\bayuratechmvc\app\config)
-    // echo dirname(__FILE__);
-
-    // kalau nak display D:\Xampp\htdocs\bayuratechmvc\app ni je
-    // echo dirname(dirname(__FILE__));
     define ('APPROOT', dirname(dirname(__FILE__)));
 
     //URL root
-    define ('URLROOT', 'http://localhost/bayuratechmvc/public');
+    define ('URLROOT', '_YOUR_DBNAME_');
 
     //Site names
-    define('SITENAME', 'BayuratechMVC');
+    define('SITENAME', '_YOUR_SITENAME_');
