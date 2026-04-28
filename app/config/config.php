@@ -13,3 +13,6 @@
 
     //Site names
     define('SITENAME', 'UserLogin');
+
+    //App versions
+    define('APPVERSION', '1.0.0');

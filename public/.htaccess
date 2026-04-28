@@ -1,7 +1,7 @@
 <IfModule mod_rewrite.c>
     Options -Multiviews
     RewriteEngine On
-    RewriteBase /bayuratechmvc/public
+    RewriteBase /userlogin/public
     RewriteCond %{REQUEST/FILENAME} !-d
     RewriteCond %{REQUEST/FILENAME} !-f
     RewriteRule ^(.+)$ index.php?url=$1 [QSA,L]
