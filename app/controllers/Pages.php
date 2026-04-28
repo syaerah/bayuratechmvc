@@ -7,7 +7,7 @@
         public function index(){
             $data = [
                 'title' => 'User Login',
-                'description' => 'Simple social network built on this framework'
+                'description' => 'Simple user authentication built on this framework'
             ];
             
             $this->view('pages/index', $data);
@@ -16,11 +16,23 @@
         public function about(){
             $data = [
                 'title' => 'About Us',
-                'description' => 'App to share posts with other users'
+                'description' => 'User login app for practice and future expansion.'
             ];
 
             $this->view('pages/about', $data);
 
         }
+
+        public function register(){
+            $data = [
+                'title' => 'About Us',
+                'description' => 'User login app for practice and future expansion.'
+            ];
+
+            $this->view('pages/about', $data);
+
+        }
+
+
     }
 
