@@ -82,8 +82,39 @@
         public function login(){
             //check Post
             if($_SERVER['REQUEST_METHOD'] == 'POST'){
-        } //process form
-        else{
+                //process form
+
+                //sanitize POST data
+                $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
+
+                //Init data
+                $data=[
+                    'email' => trim($_POST['email']),
+                    'password' => trim($_POST['password']),
+                    'email_err' => '',
+                    'password_err' => '',
+                ];
+
+                //validate email
+                if(empty($data['email'])){
+                    $data['email_err'] = 'Please enter email';
+                }
+
+                //validate password
+                if(empty($data['password'])){
+                    $data['password_err'] = 'Please enter password';
+                }
+
+                //nak pastikan xde error
+                if(empty($data['email_err']) && empty($data['password_err'])){
+                    //validated
+                    die('SUCCESS');
+                } else {
+                    //load view with errors
+                    $this->view('users/login', $data);
+                }
+                
+        } else{
             //Init data
             $data=[
                 'email' => '',
