@@ -23,16 +23,5 @@
 
         }
 
-        public function register(){
-            $data = [
-                'title' => 'About Us',
-                'description' => 'User login app for practice and future expansion.'
-            ];
-
-            $this->view('pages/about', $data);
-
-        }
-
-
     }
 
