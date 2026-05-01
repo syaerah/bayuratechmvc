@@ -59,7 +59,17 @@
             //nak pastikan xde error
             if(empty($data['email_err']) && empty($data['name_err']) && empty($data['password_err']) && empty($data['confirm_password_err'])){
                 //validated
-                die('SUCCESS');
+
+                //Hash password
+                $data['password'] = password_hash($data['password'], PASSWORD_DEFAULT);
+
+                //register user
+                if($this->userModel->register($data)){
+                    redirect('users/login');
+                } else {
+                    die('Something went wrong');
+                }
+                
             } else {
                 //die(var_dump($data));
                 //load view with errors

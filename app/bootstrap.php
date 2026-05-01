@@ -3,12 +3,8 @@
     //nak load config file
     require_once 'config/config.php';
 
-    /*
-    //load kat libraries
-    require_once 'libraries/core.php';
-    require_once 'libraries/controller.php';
-    require_once 'libraries/database.php';
-    */
+    //load helpers
+    require_once 'helpers/url_helper.php';
 
     //Autoload core libraries
     spl_autoload_register(function($className){
